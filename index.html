@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Dev Anjeli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Portfolio.</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h3>Hello, <span class="highlight">I am</span></h3>
+            <h1><span class="typing-text">Anjeli Tajriani Raihanna</span></h1>
+            <h2>UI/UX & Cybersecurity Enthusiast</h2>
+            <p>6th-semester Informatics at Universitas Muhammadiyah Malang student specializing in Backend Development and Cybersecurity. I combine technical logic with creative design to build secure, user-centric applications. Open for internship roles where I can apply my skills and learn from industry experts.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/anjeli.raihanna.7/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/jjexafli" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/lililuveo/" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="btn-container">
+                <a href="Curriculum Vitae Anjeli.pdf" class="btn">Download CV</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="home-image">
+            <img src="Foto profil buat porto.jpg" alt="Profile" class="profile-pic">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="Foto profil about me.JPG" alt="About Me" style="border-radius: 10px; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);">
+        </div>
+        <div class="about-content">
+            <h2>About <span class="highlight">Me</span></h2>
+            <p>I am a 6th-semester Informatics student at University of Muhammadiyah Malang, specializing in Network Engineering. I have a unique profile that blends a creative UI/UX design background with a strong technical focus on Backend Development and Networking.</p>
+            <p>My interest lies in building secure and efficient web systems, where I can apply my knowledge of server logic and network protocols. I am a fast learner, detail-oriented, and currently seeking a Backend Developer Internship to contribute to building robust digital solutions while further sharpening my technical arsenal.</p>
+            <div class="skills-preview" style="margin-top: 2rem;">
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <span style="background: rgba(73, 13, 13, 0.235); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; color: #ffffff;">React</span>
+                    <span style="background: rgba(73, 13, 13, 0.235); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; color: #ffffff;">Node.js</span>
+                    <span style="background: rgba(73, 13, 13, 0.235); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; color: #ffffff;">Python</span>
+                    <span style="background: rgba(73, 13, 13, 0.235); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; color: #ffffff;">UI/UX</span>
+                </div>
+            </div>
+            <a href="#services" class="btn" style="margin-top: 2rem;">Explore My Services</a>
+        </div>
+    </section>
+
+<section id="services" class="services">
+    <h2 class="section-title">My <span class="highlight">Expertise</span></h2>
+    <div class="services-container">
+        <div class="service-card">
+            <div class="service-icon">&lt;/&gt;</div>
+            <h3>Backend Development</h3>
+            <p>Membangun logika server yang efisien, manajemen database, dan integrasi API untuk aplikasi yang skalabel.</p>
+            <a href="#" class="btn read-more-btn">Read More</a>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">✏</div>
+            <h3>UI/UX Design</h3>
+            <p>Merancang antarmuka yang estetis dan berfokus pada pengalaman pengguna yang intuitif dan modern.</p>
+            <a href="#" class="btn read-more-btn">Read More</a>
+        </div>
+        <div class="service-card highlight-card"> 
+            <div class="service-icon">🌐</div>
+            <h3>Network & Security</h3>
+            <p>Implementasi protokol jaringan dan keamanan sistem untuk memastikan data terkirim dengan aman.</p>
+            <a href="#" class="btn read-more-btn">Read More</a>
+        </div>
+    </div>
+</section>
+
+<div id="serviceModal" class="modal">
+    <div class="modal-content" style="max-width: 500px; background: #1a0808; border: 1px solid #ff4d4d; padding: 30px; border-radius: 15px;">
+        <span class="close-service-modal" style="position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; color: #ff4d4d;">&times;</span>
+        <h2 id="serviceTitle" style="color: #ff4d4d; margin-bottom: 15px;"></h2>
+        <hr style="border: 0.5px solid #ff4d4d; margin-bottom: 15px;">
+        <p id="serviceDesc" style="color: #ddd; line-height: 1.6; text-align: center;"></p>
+    </div>
+</div>
+
+<!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+            <div class="posts-grid">
+                <div class="post-card" 
+                    data-image="saflaya login page.png" 
+                    data-file="LAPORAN WAWANCARA SAFLAYA EDUTECH.pdf" 
+                    data-caption="Saflaya Edutech: Desain identitas brand Saflaya Edutech yang dioptimalkan untuk kebutuhan marketing digital dan dokumentasi formal organisasi.">
+                    
+                    <img src="logo saflaya mentahan.png" alt="Project KKN" class="post-image">
+                    
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-info">
+                                <h4>Saflaya Edutech</h4>
+                                <span>Visual Branding & Creative Design</span>
+                            </div>
+                        </div>
+                        <p class="post-caption">Desain struktural anggota KKN yang dibuat di Canva untuk publikasi Instagram.</p>
+                        <div class="post-actions">
+                            <div>
+                                <button class="action-btn view-details-btn"><i class="fas fa-eye"></i> View PDF</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="projectModal" class="modal">
+            <div class="modal-content project-modal-box" style="max-width: 800px; width: 90%;">
+                <span class="close-project-modal" style="position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; color: #ff4d4d; z-index: 10;">&times;</span>
+                
+                <iframe id="projectFrame" src="" width="100%" height="500px" style="border: none; border-radius: 10px; margin-top: 20px;"></iframe>
+                
+                <div style="margin-top: 15px; text-align: center;">
+                    <a id="downloadLink" href="#" download class="btn" style="text-decoration: none; display: inline-block;">
+                        <i class="fas fa-download"></i> Download File
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+          <div class="posts-grid">
+                <div class="post-card" 
+                    data-image="Logo KKN kelompok 5.png" 
+                    data-file="Catatan Kreatif Pengabdian KKN UMM.pdf" 
+                    data-caption="Kisah di Balik Desa: Bukan sekadar dokumentasi KKN biasa. Ini adalah cara saya menceritakan perjalanan pengabdian kami melalui sentuhan desain yang lebih hidup dan bercerita.">
+                    
+                    <img src="Logo KKN kelompok 5.png" class="post-image">
+                    
+                    <div class="post-content">
+                        <div class="post-header">
+                            <div class="post-info">
+                                <h4>KKN Journey</h4>
+                                <span>Digital Showcase</span>
+                            </div>
+                        </div>
+                        <p class="post-caption">Desain struktural anggota KKN yang dibuat di Canva untuk publikasi Instagram.</p>
+                        <div class="post-actions">
+                            <div>
+                                <button class="action-btn view-details-btn"><i class="fas fa-eye"></i> View PDF</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="projectModal" class="modal">
+            <div class="modal-content project-modal-box" style="max-width: 800px; width: 90%;">
+                <span class="close-project-modal" style="position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; color: #ff4d4d; z-index: 10;">&times;</span>
+                
+                <iframe id="projectFrame" src="" width="100%" height="500px" style="border: none; border-radius: 10px; margin-top: 20px;"></iframe>
+                
+                <div style="margin-top: 15px; text-align: center;">
+                    <a id="downloadLink" href="#" download class="btn" style="text-decoration: none; display: inline-block;">
+                        <i class="fas fa-download"></i> Download File
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    <!-- Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="videoFrame" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact <span class="highlight">Me!</span></h2>
+        
+        <form class="contact-form" action="https://formspree.io/f/mnjlzbje" method="POST">
+            
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Mobile Number" required>
+            
+            <input type="text" name="_subject" placeholder="Email Subject" required>
+            
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
