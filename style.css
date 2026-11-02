@@ -1,4 +1,4 @@
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -6,8 +6,9 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: hsl(0, 62%, 10%);
-            color: #ffffff;
+            /* Cyber Security Dark Theme: Halus & Nyaman di Mata */
+            background-color: #0f111a;
+            color: #e6e8ec;
             overflow-x: hidden;
         }
 
@@ -16,19 +17,27 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(150, 99, 99, 0.9);
+            background-color: rgba(22, 25, 38, 0.85);
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            border-bottom: 1px solid rgba(214, 159, 159, 0.1);
+            border-bottom: 1px solid rgba(230, 126, 128, 0.15);
+            backdrop-filter: blur(10px);
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: #ffffff;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            color: #e67e80;
         }
 
         .nav-links {
@@ -38,7 +47,7 @@
         }
 
         .nav-links a {
-            color: #ffffff;
+            color: #c5c9d3;
             text-decoration: none;
             font-weight: 500;
             position: relative;
@@ -52,7 +61,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #db9191;
+            background-color: #e67e80;
             transition: width 0.3s;
         }
 
@@ -71,19 +80,24 @@
             display: inline-block;
             margin-left: 1rem;
             padding: 0.5rem 1rem;
-            background-color: rgba(255, 0, 0, 0.1);
-            border: 1px solid #594242;
+            background-color: rgba(230, 126, 128, 0.1);
+            border: 1px solid rgba(230, 126, 128, 0.3);
             border-radius: 20px;
             text-decoration: none;
-            color: #00aaff;
+            color: #38ef7d;
             font-weight: 500;
             transition: all 0.3s;
         }
 
         .social-link:hover {
-            background-color: #ed3d98;
+            background-color: #e67e80;
             color: #ffffff;
             transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(230, 126, 128, 0.4);
+        }
+
+        .social-link:active {
+            transform: scale(0.95);
         }
 
         /* Sections */
@@ -95,19 +109,20 @@
             justify-content: center;
         }
 
-        /* Home Section */
+        /* Home Section - Gradasi Dihaluskan */
         .home {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            background: linear-gradient(135deg, rgba(144, 14, 129, 0.1), rgba(253, 193, 193, 0.9));
+            background: linear-gradient(135deg, #0f111a 0%, #1c1524 50%, #151926 100%);
         }
 
         .home-content h3 {
             font-size: 2rem;
             font-weight: 400;
             margin-bottom: 2rem;
+            color: #a0a7b5;
         }
 
         .home-content h3 .highlight {
@@ -119,27 +134,28 @@
             font-weight: 700;
             margin-bottom: 1rem;
             min-height: 100px;
+            color: #ffffff;
         }
 
         .home-content h2 {
             font-size: 1.8rem;
             font-weight: 500;
-            color: #230707;
+            color: #e67e80;
             margin-bottom: 1.5rem;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .home-content p {
             font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 2.5rem;
-            opacity: 0.8;
+            color: #9aa1b1;
             max-width: 500px;
         }
 
         .typing-text {
             display: inline-block;
-            border-right: 3px solid #ffffff;
+            border-right: 3px solid #e67e80;
             animation: blink 0.7s infinite;
         }
 
@@ -157,20 +173,26 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: #ffffff;
+            background-color: #1e2230;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #651b1b;
+            color: #e67e80;
             text-decoration: none;
             font-size: 1.5rem;
             transition: all 0.3s;
         }
 
         .social-icons a:hover {
-            background-color: #651b1b;
+            background-color: #e67e80;
             color: #ffffff;
-            transform: scale(1.1);
+            transform: translateY(-3px) rotate(8deg) scale(1.1);
+            box-shadow: 0 5px 15px rgba(230, 126, 128, 0.4);
+        }
+        
+        .social-icons a:active {
+            transform: translateY(1px) scale(0.95);
         }
 
         .btn-container {
@@ -179,32 +201,61 @@
             flex-wrap: wrap;
         }
 
+        /* Tombol Utama */
         .btn {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background-color: #651b1b;
+            background: linear-gradient(135deg, #7a2832 0%, #4a151e 100%);
             color: #ffffff;
-            border: none;
-            border-radius: 0;
+            border: 1px solid rgba(230, 126, 128, 0.3);
+            border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(92, 3, 3, 0.5);
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(122, 40, 50, 0.5);
+            border-color: #e67e80;
+        }
+
+        .btn:active, 
+        .watch-btn:active, 
+        .action-btn:active,
+        .contact-form button:active {
+            transform: scale(0.95) translateY(0) !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
         }
 
         .btn-secondary {
-            background-color: transparent;
-            border: 2px solid #651b1b;
-            color: #651b1b;
+            background: transparent;
+            border: 2px solid #7a2832;
+            color: #e67e80;
         }
 
         .btn-secondary:hover {
-            background-color: #ffffff00;
+            background-color: #7a2832;
             color: #ffffff;
         }
 
@@ -218,23 +269,21 @@
         .profile-pic {
             width: 400px;
             height: 400px;
-            border: 5px solid #ffbdbd;
+            border: 3px solid rgba(230, 126, 128, 0.5);
             margin: 0 auto 2rem;
             object-fit: cover;
             position: relative;
             z-index: 2;
             border-radius: 20%;
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            box-shadow: 0 0 35px rgba(122, 40, 50, 0.4);
             animation: float 3s ease-in-out infinite;
         }
-
-
 
         .orbit-container {
             position: absolute;
             width: 450px;
             height: 450px;
-            border: 2px solid rgb(255, 255, 255);
+            border: 1px dashed rgba(230, 126, 128, 0.25);
             border-radius: 50%;
             animation: rotate 20s linear infinite;
         }
@@ -246,21 +295,32 @@
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-30px); }
+            50% { transform: translateY(-20px); }
         }
 
         .orbit-icon {
             position: absolute;
-            width: 60px;
-            height: 60px;
-            background-color: #651b1b;
+            width: 55px;
+            height: 55px;
+            background-color: #1e2230;
+            border: 1px solid #7a2832;
+            color: #e67e80;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 0.9rem;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            font-size: 0.85rem;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .orbit-icon:hover {
+            transform: scale(1.25) !important;
+            background-color: #7a2832;
+            color: #ffffff;
+            z-index: 10;
         }
 
         .orbit-icon:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
@@ -275,48 +335,58 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            background-color: #0f111a;
         }
 
         .about-image img {
             width: 100%;
             max-width: 500px;
             height: 500px;
-            border: 5px solid #651b1b;
+            border: 3px solid #7a2832;
             margin: 0 auto 2rem;
             object-fit: cover;
             border-radius: 15px;
-            box-shadow: 0 40px 40px rgb(255, 255, 255), 0 0 20px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(122, 40, 50, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.02) rotate(-1deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(230, 126, 128, 0.4);
         }
 
         .about-content h2 {
             font-size: 3rem;
             margin-bottom: 2rem;
+            color: #ffffff;
         }
 
         .about-content h2 .highlight {
-            color: #651b1b;
+            color: #e67e80;
         }
 
         .about-content p {
             text-align: justify;
             line-height: 1.8;
             margin-bottom: 1.5rem;
-            opacity: 0.9;
+            color: #d8dce3;
         }
 
         /* Services Section */
         .services {
             flex-direction: column;
+            background-color: #131622;
         }
 
         .section-title {
             font-size: 3rem;
             text-align: center;
             margin-bottom: 4rem;
+            color: #ffffff;
         }
 
         .section-title .highlight {
-            color: #ffffff;
+            color: #e67e80;
         }
 
         .services-container {
@@ -328,12 +398,12 @@
         }
 
         .service-card {
-            background: linear-gradient(135deg, rgba(13, 13, 13, 0.9), rgba(26, 26, 26, 0.8));
+            background: #181c2b;
             padding: 3rem 2rem;
-            border-radius: 20px;
+            border-radius: 16px;
             text-align: center;
             transition: all 0.4s ease;
-            border: 2px solid rgba(255, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             overflow: hidden;
         }
@@ -345,7 +415,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(230, 126, 128, 0.15), transparent);
             transition: left 0.5s;
         }
 
@@ -354,38 +424,40 @@
         }
 
         .service-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
-            border-color: #ff0000;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(122, 40, 50, 0.3);
+            border-color: rgba(230, 126, 128, 0.4);
         }
 
         .service-icon {
-            font-size: 4rem;
-            color: #ff0000;
+            font-size: 3.5rem;
+            color: #e67e80;
             margin-bottom: 1.5rem;
             transition: all 0.3s;
         }
 
         .service-card:hover .service-icon {
             transform: scale(1.1);
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            text-shadow: 0 0 15px rgba(230, 126, 128, 0.6);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
+            color: #ffffff;
         }
 
         .service-card p {
             text-align: justify;
             line-height: 1.6;
-            opacity: 0.8;
+            color: #e9ebef;
             margin-bottom: 1.5rem;
         }
 
         /* Projects Section */
         .projects {
             flex-direction: column;
+            background-color: #0f111a;
         }
 
         .projects-grid {
@@ -399,16 +471,17 @@
         .project-card {
             position: relative;
             height: 300px;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
             cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .project-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s;
+            transition: transform 0.4s;
         }
 
         .project-overlay {
@@ -417,7 +490,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 0, 0, 0.9);
+            background-color: rgba(15, 17, 26, 0.92);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -432,31 +505,37 @@
         }
 
         .project-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.08);
         }
 
         .project-overlay h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+            color: #ffffff;
         }
 
         .project-overlay p {
             text-align: center;
             margin-bottom: 1.5rem;
+            color: #9aa1b1;
+            font-size: 0.95rem;
         }
 
         .watch-btn {
             padding: 0.8rem 2rem;
-            background-color: #ffffff;
-            color: #ff0000;
-            border-radius: 0;
+            background-color: #7a2832;
+            color: #ffffff;
+            border-radius: 6px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
+            display: inline-block;
         }
 
         .watch-btn:hover {
             transform: scale(1.05);
+            background-color: #e67e80;
+            color: #0f111a;
         }
 
         /* Posts Section */
@@ -470,19 +549,22 @@
         }
 
         .post-card {
-            background-color: #b0413e;
-            border-radius: 15px;
+            background-color: #181c2b;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             width: 100%;
             max-width: 400px;
-            margin: 0 auto; /* Tambahkan ini agar kartu jomblo tetap di tengah */
+            margin: 0 auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .post-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 181, 181, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border-color: rgba(230, 126, 128, 0.3);
         }
 
         .post-image {
@@ -506,22 +588,24 @@
             height: 40px;
             border-radius: 50%;
             margin-right: 1rem;
-            border: 2px solid #ff0000;
+            border: 2px solid #e67e80;
         }
 
         .post-info h4 {
             font-size: 1rem;
             margin-bottom: 0.2rem;
+            color: #ffffff;
         }
 
         .post-info span {
             font-size: 0.8rem;
-            opacity: 0.7;
+            color: #eceff5;
         }
 
         .post-caption {
             margin-bottom: 1rem;
             line-height: 1.6;
+            color: #e5ebf6;
         }
 
         .post-actions {
@@ -533,76 +617,95 @@
         .action-btn {
             background: none;
             border: none;
-            color: #ffffff;
+            color: #8c94a4;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.2s;
             padding: 0.5rem;
         }
 
         .action-btn:hover {
-            color: #ff0000;
+            color: #e67e80;
+            transform: scale(1.2);
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.35); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
 
         .like-btn.liked {
-            color: #ff0000;
+            color: #e67e80;
+            animation: heartbeat 0.4s ease-in-out;
         }
 
-                /* Modal Dasar */
+        /* Modal */
         .modal {
-            display: none; /* Kita pakai JS untuk ganti jadi flex nanti */
+            display: none;
             position: fixed;
             z-index: 2000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(10, 12, 18, 0.85);
             justify-content: center;
             align-items: center;
-            backdrop-filter: blur(5px); 
+            backdrop-filter: blur(8px); 
         }
 
         .modal-content {
-            position: relative;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 90%;
             max-width: 500px; 
-            background: #1a0808; 
+            background: #181c2b; 
             padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #ff4d4d; 
+            border-radius: 12px;
+            border: 1px solid rgba(230, 126, 128, 0.4); 
             color: white;
             text-align: center;
-            box-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            animation: zoomInEffect 0.4s ease-out forwards; 
         }
 
         .close-modal {
             position: absolute;
             top: 10px;
             right: 20px;
-            color: #ff4d4d;
+            color: #8c94a4;
             font-size: 30px;
             font-weight: bold;
             cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
 
-        /* Tambahkan ini untuk styling teks di dalam modal */
+        .close-modal:hover {
+            color: #e67e80;
+            transform: rotate(90deg) scale(1.2);
+        }
+
         #modal-title {
             margin-bottom: 15px;
-            color: #ff4d4d;
+            color: #e67e80;
             font-size: 1.5rem;
         }
 
         #modal-desc {
             line-height: 1.6;
             font-size: 1rem;
-            color: #ddd;
+            color: #a0a7b5;
         }
-
 
         /* Contact Section */
         .contact {
             flex-direction: column;
+            background-color: #131622;
         }
 
         .contact-form {
@@ -616,18 +719,25 @@
         .contact-form input,
         .contact-form textarea {
             padding: 1rem;
-            background-color: rgb(255, 255, 255);
-            border: 1px solid rgb(255, 255, 255);
-            border-radius: 10px;
-            color: #333333;
-            font-family: 'Poppins', sans-serif;
-            transition: border-color 0.3s;
+            background-color: #ffffff;
+            border: 1px solid rgba(244, 241, 241, 0.08);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #616979;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: #ff0000;
+            border-color: #e67e80;
+            box-shadow: 0 0 12px rgba(230, 126, 128, 0.25);
+            transform: translateY(-2px);
         }
 
         .contact-form textarea {
@@ -659,13 +769,13 @@
             }
 
             .orbit-container {
-                width: 700px;
-                height: 400px;
+                width: 350px;
+                height: 350px;
             }
 
             .profile-pic {
-                width: 300px;
-                height: 300px;
+                width: 280px;
+                height: 280px;
             }
 
             .projects-grid {
@@ -677,9 +787,7 @@
             }
         }
 
-
-        /* --- Bagian Animasi Modal --- */
-
+        /* Animations */
         @keyframes zoomInEffect {
             0% {
                 transform: translate(-50%, -50%) scale(0.5); 
@@ -695,23 +803,9 @@
             }
         }
 
-        /* Fade In untuk background */
         @keyframes fadeInBg {
             from { opacity: 0; }
             to { opacity: 1; }
-        }
-
-
-
-        .modal-content {
-            /* ... kode CSS-mu yang sudah ada ... */
-            position: fixed; /* atau absolute, tergantung strukturmu */
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Wajib agar center sempurna saat animasi */
-            
-            /* Tambahkan baris ini untuk animasi konten */
-            animation: zoomInEffect 0.4s ease-out forwards; 
         }
 
         .modal {
