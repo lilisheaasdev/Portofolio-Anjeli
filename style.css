@@ -6,7 +6,7 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: hsl(0, 51%, 44%);
+            background-color: hsl(0, 62%, 10%);
             color: #ffffff;
             overflow-x: hidden;
         }
@@ -16,7 +16,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(59, 30, 30, 0.9);
+            background-color: rgba(150, 99, 99, 0.9);
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
@@ -52,7 +52,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #caf0f8;
+            background-color: #db9191;
             transition: width 0.3s;
         }
 
@@ -111,7 +111,7 @@
         }
 
         .home-content h3 .highlight {
-            color: #651b1b;
+            color: #ffffff;
         }
 
         .home-content h1 {
@@ -124,7 +124,7 @@
         .home-content h2 {
             font-size: 1.8rem;
             font-weight: 500;
-            color: #651b1b;
+            color: #230707;
             margin-bottom: 1.5rem;
             opacity: 0.9;
         }
