@@ -110,12 +110,7 @@ closeProjectBtn.onclick = () => {
 };
 
 
-        // Form Submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Message sent successfully!');
-            this.reset();
-        });
+
 
         // Portfolio Showcase Functionality
         const viewDemoBtns = document.querySelectorAll('.view-demo-btn');
